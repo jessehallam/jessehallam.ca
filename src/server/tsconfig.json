@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "allowJs": false,
+        "alwaysStrict": true,
+        "esModuleInterop": true,
+        "lib": [
+            "dom",
+            "es6"
+        ],
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "outDir": "../../dist/server",
+        "target": "es2015"
+    }
+}
