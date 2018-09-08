@@ -2,9 +2,41 @@
 <html lang="en">
     <head>
         <title>Jesse Hallam, Full-Stack Web Developer</title>
+
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700" rel="stylesheet" type="text/css">
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <link href="/www-static/optimized.css" rel="stylesheet">
+        <link href="/www-static/site.css" rel="stylesheet">
+        <link href="/www-static/site-mobile.css" rel="stylesheet">
     </head>
-    <body>
+    <body class="jh">
         <div id="app"></div>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+        <script src="/www-static/owl.carousel.min.js"></script>
+        <script>
+            $(function () {
+                $('#mobile-menu-button').click(function () {
+                    $(this).addClass('open');
+                });
+    
+                $('.nav-mobile > li').click(function () {
+                    $('#mobile-menu-button').removeClass('open');
+                });
+    
+                $('.mobile-menu-close > a').click(function () {
+                    $('#mobile-menu-button').removeClass('open');
+                });
+            });
+        </script>
+
         <script src="/dist/main.js"></script>
     </body>
 </html>
