@@ -7,7 +7,7 @@ import { HTTP_PORT } from './config'
 
 const app = express()
 
-app.use(bodyParser())
+app.use(bodyParser.json())
 app.use(fallback())
 app.use(express.static(path.resolve(__dirname, '../../wwwroot')))
 
