@@ -1,4 +1,5 @@
 import * as React from 'react'
+import Carousel from './util/carousel'
 
 export default function Projects() {
     return <section className="panel" id="me">
@@ -38,6 +39,19 @@ export default function Projects() {
                     </div>
                 </div>
                 <div className="proj-image">
+                    <Carousel>
+                        <div className="owl-carousel owl-theme">
+                            <div className="item">
+                                <img alt="Reddit flairs thumbnail" src="/www-static/project/flair/flairs_image2.png"/>
+                            </div>
+                            <div className="item">
+                                <img alt="Reddit flairs thumbnail" src="/www-static/project/flair/flairs_image1.png"/>
+                            </div>
+                            <div className="item">
+                                <img alt="Reddit flairs thumbnail" src="/www-static/project/flair/flairs_image3.png"/>
+                            </div>
+                        </div>
+                    </Carousel>
                 </div>
             </li>
         </ul>

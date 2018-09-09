@@ -25,17 +25,6 @@ Message: ${req.body.message}`,
         });
 
     mailRequest.then(() => res.sendStatus(200), () => res.sendStatus(500));
-    // try {
-    //     await sendContact({
-    //         message: req.body.message,
-    //         name: req.body.name,
-    //         phone: req.body.phone
-    //     })
-    // } catch (err) {
-    //     console.error(err)
-    // } finally {
-    //     res.json({})
-    // }
 })
 
 app.use(fallback())
