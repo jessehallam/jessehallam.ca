@@ -5,9 +5,14 @@ import path from 'path'
 
 import { HTTP_PORT } from './config'
 
+import * as blog from './blog'
+
 const app = express()
 
 app.use(bodyParser.json())
+blog.initialize(app, {
+    path: path.resolve(__dirname, '../../_blog/_posts')
+})
 
 app.post('/api/mail', async (req, res) => {
     const Mailer = require('node-mailjet').connect(process.env.MAILJET_PUBLIC_KEY, process.env.MAILJET_PRIVATE_KEY);
