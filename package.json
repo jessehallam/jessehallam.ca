@@ -5,11 +5,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "concurrently \"npm run-script build-client -- --watch\" \"npm run-script build-server -- --watch\" ",
+    "build": "cross-env NODE_ENV=production npm run-script build-client && npm run-script build-server",
     "build-client": "webpack --config src/client/webpack.config.js",
     "build-server": "tsc -p src/server",
-    "dev": "cross-env NODE_ENV=development concurrently \"npm run build\" \"npm run start-server\" ",
-    "start-server": "nodemon --watch dist/server dist/server/server.js"
+    "dev": "cross-env NODE_ENV=development concurrently \"npm run-script build-client -- --watch\" \"npm run-script build-server -- --watch\" \"npm run-script start\" ",
+    "start": "nodemon --watch dist/server --delay 100ms dist/server/server.js"
   },
   "keywords": [],
   "author": "",
