@@ -1,5 +1,4 @@
-![Build status] ![License] 
-
+![Build status] ![License]  
 ![Open Issues] ![Issues PR] ![Issues Closed]
 
 This project is the official website for Jesse Colin Hallam, a Full-Stack Web Developer.
