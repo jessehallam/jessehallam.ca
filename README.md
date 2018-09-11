@@ -1,4 +1,6 @@
-![Build status] ![License]
+![Build status] ![License] 
+
+![Open Issues] ![Issues PR] ![Issues Closed]
 
 This project is the official website for Jesse Colin Hallam, a Full-Stack Web Developer.
 
@@ -16,3 +18,6 @@ This project is the official website for Jesse Colin Hallam, a Full-Stack Web De
 
 [Build Status]: https://jessehallam.visualstudio.com/CI%20-%20jessehallam.ca/_apis/build/status/Docker%20container
 [License]: https://img.shields.io/github/license/jessehallam/jessehallam.ca.svg
+[Open Issues]: https://img.shields.io/github/issues-raw/jessehallam/jessehallam.ca.svg
+[Issues PR]: https://img.shields.io/github/issues-pr/jessehallam/jessehallam.ca.svg
+[Issues Closed]: https://img.shields.io/github/issues-closed-raw/jessehallam/jessehallam.ca.svg
