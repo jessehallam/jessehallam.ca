@@ -1,5 +1,6 @@
 ![Build status] ![License]  
-![Open Issues] ![Issues PR] ![Issues Closed]
+![Open Issues] ![Issues PR] ![Issues Closed]  
+![Is it up]
 
 This project is the official website for Jesse Colin Hallam, a Full-Stack Web Developer.
 
@@ -20,3 +21,5 @@ This project is the official website for Jesse Colin Hallam, a Full-Stack Web De
 [Open Issues]: https://img.shields.io/github/issues-raw/jessehallam/jessehallam.ca.svg
 [Issues PR]: https://img.shields.io/github/issues-pr/jessehallam/jessehallam.ca.svg
 [Issues Closed]: https://img.shields.io/github/issues-closed-raw/jessehallam/jessehallam.ca.svg
+
+[Is it up]: https://img.shields.io/website-up-down-green-red/http/jessehallam.ca.svg?label=Website
