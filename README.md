@@ -6,10 +6,10 @@ This project is the official website for Jesse Colin Hallam, a Full-Stack Web De
 
 ## Technologies Used:
 
-- [Node.js]
-- [Express]
-- [React]
-- [Azure Pipelines] (Continuous delivery)
+✔️ [Node.js]  
+✔️ [Express]  
+✔️ [React]  
+✔️ [Azure Pipelines] (Continuous delivery)
 
 [Node.js]: https://nodejs.org/
 [Express]: https://expressjs.com/
