@@ -2,7 +2,7 @@
     {
         "name": "Build Bot",
         "description": [
-            "Build Bot is a Discord chat bot which announces the completion of Continuous Integration / Continuous Deployment builds on Azure DevOps (formerly Visual Studio Team Services Online)."
+            "Build Bot is a [Discord](https://discordapp.com/) chat bot which announces the completion of Continuous Integration / Continuous Deployment builds on [Azure DevOps](https://azure.microsoft.com/en-ca/services/devops/) (formerly Visual Studio Online)."
         ],
         "meta": {
             "GitHub": { "href": "https://github.com/jessehallam/build-bot", "text": "https://github.com/jessehallam/build-bot" }

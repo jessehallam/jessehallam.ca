@@ -487,3 +487,8 @@
   }
   */
   
+  .proj-details a:link,
+  .proj-details a:visited,
+  .proj-details a:active {
+    color: rgb(64, 84, 175);
+  }

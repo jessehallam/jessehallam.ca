@@ -1,17 +1,21 @@
 import * as React from 'react'
 import Carousel from './util/carousel'
 
+import * as marked from 'marked'
+
 import * as projectData from '../projects.json'
 
 function Project(props: IProject & {displaySeparator: boolean}) {
     let description: JSX.Element | JSX.Element[]
     let meta: JSX.Element[] = []
 
-    if (Array.isArray(props.description))
-        description = props.description.map((p, i) => <p key={i}>{ p }</p>)
-    else
-        description = <p>{ props.description }</p>
+    if (!Array.isArray(props.description))
+        props.description = [props.description]
 
+    description = props.description.map((para, i) => (
+        <p key={'para-' + i} dangerouslySetInnerHTML={{ __html: marked(para) }}></p>
+    ))
+    
     meta = Object.keys(props.meta).reduce(
         (elements, key, i) => {
             const value = props.meta[key]
