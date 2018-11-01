@@ -1,0 +1,49 @@
+[
+    {
+        "name": "Build Bot",
+        "description": [
+            "Build Bot is a Discord chat bot which announces the completion of Continuous Integration / Continuous Deployment builds on Azure DevOps (formerly Visual Studio Team Services Online)."
+        ],
+        "meta": {
+            "GitHub": { "href": "https://github.com/jessehallam/build-bot", "text": "https://github.com/jessehallam/build-bot" }
+        },
+        "tags": [
+            "JavaScript",
+            "ES6",
+            "Node.js",
+            "Discord.js"
+        ],
+        "carousel": {
+            "slides": [
+                { "src": "https://github.com/jessehallam/build-bot/blob/master/github/example.png?raw=true" }
+            ]
+        }
+    },
+    {
+        "name": "Reddit Ranked Flairs",
+        "description": [
+            "Reddit Ranked Flairs is a website which automatically handles the administration of \"badges\" for a community of players in the astonishigly popular online strategy game League of Legends.",
+            "Players who visit my website are permitted to sign in using their Reddit accounts. Once their signed in, they can register to own a unique name inside the League of Legends universe.",
+            "After registering, users will have their in-game achievements shown for all to see on Reddit."
+        ],
+        "meta": {
+            "Website": { "href": "http://league-flairs.site", "text": "http://league-flairs.site" },
+            "GitHub": { "href": "https://github.com/jessehallam/RedditRankedFlairs/tree/Production", "text": "https://github.com/jessehallam/RedditRankedFlairs/" }
+        },
+        "tags": [
+            "C#",
+            "ASP.NET MVC",
+            "Entity Framework",
+            "OAuth 2.0",
+            "AngularJS",
+            "Microsoft Azure"
+        ],
+        "carousel": {
+            "slides": [
+                { "src": "/www-static/project/flair/flairs_image2.png" },
+                { "src": "/www-static/project/flair/flairs_image1.png" },
+                { "src": "/www-static/project/flair/flairs_image3.png" }
+            ]
+        }
+    }
+]

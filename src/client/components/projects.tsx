@@ -1,59 +1,68 @@
 import * as React from 'react'
 import Carousel from './util/carousel'
 
+import * as projectData from '../projects.json'
+
+function Project(props: IProject & {displaySeparator: boolean}) {
+    let description: JSX.Element | JSX.Element[]
+    let meta: JSX.Element[] = []
+
+    if (Array.isArray(props.description))
+        description = props.description.map((p, i) => <p key={i}>{ p }</p>)
+    else
+        description = <p>{ props.description }</p>
+
+    meta = Object.keys(props.meta).reduce(
+        (elements, key, i) => {
+            const value = props.meta[key]
+            elements.push(<dt key={'dt-' + i}>{ key }</dt>)
+            elements.push(<dd key={'dd-' + i}>
+                <a href={value.href} target='_blank'>{ value.text }</a>
+            </dd>)
+            return elements
+        },
+        meta
+    )
+
+    return (
+        <li className={props.displaySeparator ? 'bartop' : ''}>
+            <div className='proj-details' key={props.name}>
+                <div className='content'>
+                    <h2>{ props.name }</h2>
+
+                    <ul className='tags'>
+                        { props.tags.map((tag, i) => <li key={i}>{ tag }</li>) }
+                    </ul>
+
+                    { description }
+
+                    <dl>{ meta }</dl>
+                </div>
+            </div>
+            <div className='proj-image'>
+                <Carousel>
+                    <div className='owl-carousel owl-theme'>
+                        {
+                            props.carousel.slides.map((slide, i) => (
+                                <div className='item' key={i}>
+                                    <img alt='' src={slide.src} />
+                                </div>
+                            ))
+                        }
+                    </div>
+                </Carousel>
+            </div>
+        </li>
+    )
+}
+
 export default function Projects() {
+    const projects = (projectData as any) as IProjectData;
     return <section className="panel" id="me">
         <h1 className="barbottom">Projects</h1>
 
-        <ul className="projects">
-            <li>
-                <div className="proj-details">
-                    <div className="content">
-                        <h2>Reddit Ranked Flairs</h2>
-
-                        <ul className="tags">
-                            <li>C#</li>
-                            <li>ASP.NET MVC</li>
-                            <li>Entity Framework</li>
-                            <li>OAuth 2.0</li>
-                            <li>AngularJS</li>
-                            <li>Microsoft Azure</li>
-                        </ul>
-
-                        <p className="small">
-                            Reddit Ranked Flairs is a website which automatically handles the administration of "badges" for a community of players in the astonishigly popular online strategy game League of Legends.
-                        </p>
-                        <p className="small">
-                            Players who visit my website are permitted to sign in using their Reddit accounts. Once their signed in, they can register to own a unique name inside the League of Legends universe.
-                        </p>
-                        <p className="small">
-                            After registering, users will have their in-game achievements shown for all to see on Reddit.
-                        </p>
-                        <dl>
-                            <dt>Website:</dt>
-                            <dd><a href="http://league-flairs.site/">http://league-flairs.site</a></dd>
-
-                            <dt>GitHub:</dt>
-                            <dd><a href="https://github.com/jessehallam/RedditRankedFlairs/tree/Production">https://github.com/jessehallam/RedditRankedFlairs/</a></dd>
-                        </dl>
-                    </div>
-                </div>
-                <div className="proj-image">
-                    <Carousel>
-                        <div className="owl-carousel owl-theme">
-                            <div className="item">
-                                <img alt="Reddit flairs thumbnail" src="/www-static/project/flair/flairs_image2.png"/>
-                            </div>
-                            <div className="item">
-                                <img alt="Reddit flairs thumbnail" src="/www-static/project/flair/flairs_image1.png"/>
-                            </div>
-                            <div className="item">
-                                <img alt="Reddit flairs thumbnail" src="/www-static/project/flair/flairs_image3.png"/>
-                            </div>
-                        </div>
-                    </Carousel>
-                </div>
-            </li>
+        <ul className='projects'>
+            { projects.map((project, i) => <Project key={'project-' + i} displaySeparator={i > 0} {...project} />) }
         </ul>
     </section>
 }
