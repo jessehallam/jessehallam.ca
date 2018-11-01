@@ -1,13 +1,29 @@
 import bodyParser from 'body-parser'
 import express from 'express'
+import expressSession from 'express-session'
 import fallback from 'connect-history-api-fallback'
 import path from 'path'
+import { v4 } from 'uuid'
 
 import { HTTP_PORT } from './config'
 
+import universalAnalytics from './ua'
+
 const app = express()
 
+app.use(expressSession({
+    resave: true,
+    saveUninitialized: true,
+    secret: 'aaaa'
+}))
+app.use((req, res, next) => {
+    if (!req.session.gid) {
+        req.session.gid = v4()
+    }
+    next()
+})
 app.use(bodyParser.json())
+app.use(universalAnalytics())
 
 app.post('/api/mail', async (req, res) => {
     const Mailer = require('node-mailjet').connect(process.env.MAILJET_PUBLIC_KEY, process.env.MAILJET_PRIVATE_KEY);

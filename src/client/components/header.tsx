@@ -16,7 +16,7 @@ interface NavBarProps extends RouteProps {}
 
 function NavBar(props: NavBarProps) {
     const page = props.location.pathname.substr(1)
-
+    
     return <nav>
         <ul className='nav nav-primary'>
             <li className='icon-nav mobile-nav'>
