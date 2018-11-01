@@ -1,0 +1,59 @@
+{
+    "sections": [
+        {
+            "name": ".NET Framework, .NET Core and .NET Standard",
+            "tags": [
+                "C#",
+                "ASP.NET MVC",
+                "Entity Framework"
+            ],
+            "description": [
+                "With more than ten years of experience in the .NET Framework, I have developed a proficiency in the MVC software pattern, Inversion of Control (IOC), N-Tier applications and Data-Driven Design. I'm knowledgeable with the ASP.NET internals including both the ASP.NET and OWIN pipelines, custom view engines, and IIS server configuration.",
+                "I am also proficient with Microsoft desktop tools including Visual Studio, Team Foundation Server, SQL Server Management Studio, VS Code, Blend, and more."
+            ]
+        },
+        {
+            "name": "Front-End Web Development",
+            "tags": [
+                "HTML 5",
+                "CSS 3",
+                "SASS",
+                "JavaScript",
+                "React",
+                "Vue.js",
+                "Webpack"
+            ],
+            "description": [
+                "In 2018, the front-end ecosystem is rapidly changing and I have worked hard to remain up to date. I am confident that my expertise in HTML 5, CSS 3 and high-quality JavaScript frameworks will be an asset to your business.",
+                "I currently develop mainly in Vue.js with a Webpack build system, although I also have experience using Angular and React to create responsive single-paged applications with an emphasis on declarative design, reusable components and testable code."
+            ]
+        },
+        {
+            "name": "Data Management",
+            "tags": [
+                "SQL Server",
+                "MySQL",
+                "MariaDB",
+                "MongoDB"
+            ],
+            "description": [
+                "I possess intermediate knowledge of SQL.  My expertise includes the installation and preparation of MySQL and Microsoft SQL Server including access control. Although most of my application work is done using an ORM (such as Entity Framework), I'm comfortable writing and debugging complex SQL statements, including the use of JOINs, PRIMARY KEYs, FOREIGN KEYs, and INDEXes.",
+                "I also possess knowledge working with NoSQL databases - mainly MongoDB - including the aggregation pipeline, deploying sharded clusters, and replica sets."
+            ]
+        },
+        {
+            "name": "IT / Dev Ops",
+            "tags": [
+                "Amazon AWS",
+                "Microsoft Azure",
+                "Linux Enterprise Server",
+                "Docker",
+                "CI/CD"
+            ],
+            "description": [
+                "I'm excited about cloud computing and have used both Microsoft Azure and Amazon Web Services (AWS) to deploy the full application stack including code deployment, database deployment and integration testing.",
+                "My Operations knowledge includes firewall tuning, installing and configuring software on Linux servers, and DNS configuration."
+            ]
+        }
+    ]
+}

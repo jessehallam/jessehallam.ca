@@ -19,6 +19,12 @@ interface IProject {
     }
 }
 
+interface ISkill {
+    name: string
+    description: Array<string>
+    tags: Array<string>
+}
+
 interface JQuery {
     owlCarousel(options: any)
 }
