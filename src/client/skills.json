@@ -5,7 +5,8 @@
             "tags": [
                 "C#",
                 "ASP.NET MVC",
-                "Entity Framework"
+                "Entity Framework",
+                "SignalR"
             ],
             "description": [
                 "With more than ten years of experience in the .NET Framework, I have developed a proficiency in the MVC software pattern, Inversion of Control (IOC), N-Tier applications and Data-Driven Design. I'm knowledgeable with the ASP.NET internals including both the ASP.NET and OWIN pipelines, custom view engines, and IIS server configuration.",

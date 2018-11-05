@@ -48,7 +48,7 @@ function NavBar(props: NavBarProps) {
             </li>
 
             <li className={'icon-nav ' + (page == '' ? 'active' : '')}>
-                <Link to='/'><i className="fa fa-home"></i></Link>
+                <Link to='/' aria-label='Home'><i className="fa fa-home"></i></Link>
             </li>
 
             <li className={page == 'skills' ? 'active' : ''}>
