@@ -492,3 +492,11 @@
   .proj-details a:active {
     color: rgb(64, 84, 175);
   }
+
+  .owl-prev, .owl-next {
+    background: rgb(64, 84, 175) !important;
+  }
+
+  .owl-theme .owl-controls .owl-page span {
+    background: rgb(64, 84, 175) !important;
+  }
