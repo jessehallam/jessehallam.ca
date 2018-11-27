@@ -1,20 +1,30 @@
 import * as React from 'react'
 import { Route } from 'react-router-dom'
 
-import Contact from './contact'
-import Home from './home'
-import Projects from './projects'
-import Skills from './skills'
+import HomeComponent from './pages/Home'
 
-export default function Main() {
-    return <main>
-        <div className='container'>
-            <div className='view'>
-                <Route exact path='/contact' component={Contact} />
-                <Route exact path='/' component={Home} />
-                <Route exact path='/projects' component={Projects} />
-                <Route exact path='/skills' component={Skills} />
-            </div>
-        </div>
-    </main>
+interface OwnProps {}
+interface OwnState {}
+
+class MainComponent extends React.Component<OwnProps, OwnState> {
+    constructor(props) {
+        super(props)
+    }
+
+    render() {
+        return (
+            <main>
+                <div className='container'>
+                    <div className='view'>
+                        <Route exact path='/contact' component={null} />
+                        <Route exact path='/' component={HomeComponent} />
+                        <Route exact path='/projects' component={null} />
+                        <Route exact path='/skills' component={null} />
+                    </div>
+                </div>
+            </main>
+        )
+    }
 }
+
+export default MainComponent
