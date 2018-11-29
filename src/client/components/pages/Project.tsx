@@ -31,25 +31,18 @@ export default class Project extends React.Component<OwnProps, OwnState> {
                         <ul className='tags'>{tags}</ul>
                         <div dangerouslySetInnerHTML={description} />
                         <ProjectMeta meta={project.meta} />
-                        <ProjectCarousel slides={project.carousel.slides} />
                     </div>
                 </div>
+                <ProjectCarousel slides={project.carousel.slides} />
             </li>
         )
     }
 }
 
-function ProjectCarousel(props: { slides: config.CarouselSlide[] }) {
-    const slides = props.slides.map((slide, i) => (
-        <div className='item' key={i}>
-            <img alt='' src={slide.src} />
-        </div>
-    ))
+function ProjectCarousel({ slides }: { slides: config.CarouselSlide[] }) {
     return (
         <div className='proj-image'>
-            <Carousel>
-                <div className='owl-carousel owl-theme'>{slides}</div>
-            </Carousel>
+            <Carousel slides={slides.map(s => s.src)} />
         </div>
     )
 }

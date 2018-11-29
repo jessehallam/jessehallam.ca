@@ -1,6 +1,8 @@
 import * as React from 'react'
 
-interface OwnProps {}
+interface OwnProps {
+    slides: string[]
+}
 interface OwnState {}
 
 export default class Carousel extends React.Component<OwnProps, OwnState> {
@@ -11,6 +13,7 @@ export default class Carousel extends React.Component<OwnProps, OwnState> {
     }
 
     componentDidMount() {
+        console.log('Mounting carousel on ', this.div)
         const target = $(this.div)
         if (target && target.length) {
             target.owlCarousel({
@@ -22,6 +25,18 @@ export default class Carousel extends React.Component<OwnProps, OwnState> {
     }
 
     render() {
-        return <div ref={div => (this.div = div)}>{this.props.children}</div>
+        const items = this.props.slides.map((slide, i) => (
+            <div className='item' key={'slide-' + i}>
+                <img alt='' src={slide} />
+            </div>
+        ))
+        return (
+            <div
+                className='owl-carousel owl-theme'
+                ref={div => (this.div = div)}
+            >
+                {items}
+            </div>
+        )
     }
 }

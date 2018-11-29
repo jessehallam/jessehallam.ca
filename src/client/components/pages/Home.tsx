@@ -45,7 +45,12 @@ function InfoPanel() {
             data-toggle='tooltip'
             data-placement='top'
             title={node.title}
-        />
+        >
+            <span className='fa-stack'>
+                <i className='fa fa-circle fa-stack-2x' />
+                <i className={'fa fa-stack-1x fa-inverse ' + node.icon} />
+            </span>
+        </a>
     ))
     return (
         <div className='container-fluid info'>
