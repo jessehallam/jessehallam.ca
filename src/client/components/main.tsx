@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { Route } from 'react-router-dom'
 
+import ContactComponent from './pages/Contact'
 import HomeComponent from './pages/Home'
 import ProjectsComponent from './pages/Projects'
 import SkillsComponent from './pages/Skills'
@@ -18,7 +19,7 @@ class MainComponent extends React.Component<OwnProps, OwnState> {
             <main>
                 <div className='container'>
                     <div className='view'>
-                        <Route exact path='/contact' component={null} />
+                        <Route exact path='/contact' component={ContactComponent} />
                         <Route exact path='/' component={HomeComponent} />
                         <Route exact path='/projects' component={ProjectsComponent} />
                         <Route exact path='/skills' component={SkillsComponent} />

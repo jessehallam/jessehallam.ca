@@ -16,6 +16,13 @@ interface OwnState {
 }
 
 class ContactComponent extends React.Component<OwnProps, OwnState> {
+    readonly state: OwnState = {
+        busy: false,
+        message: '',
+        name: '',
+        phone: ''
+    }
+
     constructor(props) {
         super(props)
     }
@@ -64,6 +71,12 @@ class ContactComponent extends React.Component<OwnProps, OwnState> {
                                     value={this.state.message}
                                     change={this.onMessageChange}
                                 />
+                                <label
+                                    className='input-label'
+                                    htmlFor='message'
+                                >
+                                    Message
+                                </label>
                             </div>
 
                             <div className='form-group'>
