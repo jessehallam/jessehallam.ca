@@ -503,3 +503,11 @@
   .jh .skill-body p {
     font-size: 18px;
   }
+
+  .square {
+    border-radius: 0 !important;
+  }
+
+  .mt-1 {
+    margin-top: 8px;
+  }

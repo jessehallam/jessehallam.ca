@@ -46,10 +46,12 @@ declare namespace config {
         carousel?: {
             slides: CarouselSlide[]
         }
+        caseStudy?: string[]
     }
 }
 
 interface JQuery {
+    modal(arg: any): any
     owlCarousel(options: any)
 }
 

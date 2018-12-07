@@ -23,9 +23,7 @@
     {
         "name": "Reddit Ranked Flairs",
         "description": [
-            "Reddit Ranked Flairs is a website which automatically handles the administration of \"badges\" for a community of players in the astonishigly popular online strategy game League of Legends.",
-            "Players who visit my website are permitted to sign in using their Reddit accounts. Once their signed in, they can register to own a unique name inside the League of Legends universe.",
-            "After registering, users will have their in-game achievements shown for all to see on Reddit."
+            "Reddit Flairs is a web service which \"flairs\" users accounts on Reddit in accordance with their ladder ranking in League of Legends."
         ],
         "meta": {
             "Website": { "href": "http://league-flairs.site", "text": "http://league-flairs.site" },
@@ -45,6 +43,34 @@
                 { "src": "/www-static/project/flair/flairs_image1.png" },
                 { "src": "/www-static/project/flair/flairs_image3.png" }
             ]
-        }
+        },
+        "caseStudy": [
+            ["Synopsis",
+                "A community on the social media network Reddit requests a solution for vetting the promotion of valued contributors."
+            ],
+            ["Concepts",
+                "[Reddit](https://reddit.com) is a social news aggregation and discussion network.",
+                "",
+                "[League of Legends](https://leagueoflegends.com) is an [astonishingly popular](https://www.forbes.com/sites/insertcoin/2014/01/27/riots-league-of-legends-reveals-astonishing-27-million-daily-players-67-million-monthly/#7099ca7d6d39) action strategy game.",
+                "",
+                "Over the course of year-long sprints, called *seasons*, more than 60 million players worldwide compete to achieve standing on a competetive ladder. Successfully climbing the ladder awards players with a rank: **Bronze, Silver, Gold, Platinum, Diamond, Master, and Challenger**.",
+                "",
+                "[Summoner School](https://reddit.com/r/summonerschool) is an online community by players - for players - who have come together to improve their skill."
+            ],
+            ["Business Challenge",
+                "Every day, thousands of players come together to share information on Summoner School. Occasionally, the skill of a mentor is called into question. A Bronze or Silver player may give factually correct information, but players usually prefer to be mentored by Diamonds or Masters instead.",
+                "",
+                "The moderator team at Summoner School made several attempts to highlight the contributions of high-calibre players. Some of these included the use of Reddit's **flair system**. Flairs are badges that appear next to a person's name in all of their contributions.",
+                "",
+                "Unfortunately, these implementations were prone to abuse and dishonesty. Contributors were cheating and finding ways to obtain flairs which they hadn't earned. Meanwhile, individually validating every player was far too time consuming.",
+                "",
+                "The flair system was discontinued."
+            ],
+            ["The Solution",
+                "In the summer of 2015, Summoner School's founder put out a call for somebody to try to solve the validation problem: verify contributors in a systematic way.",
+                "",
+                "This application is the result of that effort."
+            ]
+        ]
     }
 ]
