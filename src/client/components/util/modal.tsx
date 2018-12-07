@@ -1,6 +1,7 @@
 import * as React from 'react'
 
 interface ModalProps {
+    closed?: () => void
     render: () => JSX.Element
 }
 
@@ -9,6 +10,9 @@ class Modal extends React.Component<ModalProps> {
 
     componentDidMount() {
         $(this.div).modal('show')
+        $(this.div).on('hidden.bs.modal', () => {
+            if (this.props.closed) this.props.closed()
+        })
     }
 
     render() {
@@ -20,7 +24,7 @@ class Modal extends React.Component<ModalProps> {
                 role='dialog'
             >
                 <div className='modal-dialog' role='document'>
-                    <div className='modal-content'>{this.props.render()}</div>
+                    <div className='modal-content square'>{this.props.render()}</div>
                 </div>
             </div>
         )

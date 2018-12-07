@@ -46,7 +46,7 @@ declare namespace config {
         carousel?: {
             slides: CarouselSlide[]
         }
-        caseStudy?: string[]
+        caseStudy?: Array<string[]>
     }
 }
 

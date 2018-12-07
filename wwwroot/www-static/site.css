@@ -511,3 +511,30 @@
   .mt-1 {
     margin-top: 8px;
   }
+
+  .case-study-body {
+    padding: 14px;
+  }
+
+  .case-study-title {
+    margin-bottom: 10px;
+  }
+
+  .case-study-body .breadcrumb {
+    margin-bottom: 12px;
+    overflow: auto;
+  }
+
+  .case-study-body .breadcrumb .active a {
+    font-weight: 600;
+  }
+
+  .case-study-content p {
+    font-size: 16px;
+  }
+
+  @media (min-width: 1100px) {
+    .modal-dialog {
+      width: 860px;
+    }
+  }

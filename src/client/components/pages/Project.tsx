@@ -3,6 +3,9 @@ import * as React from 'react'
 import * as marked from 'marked'
 import Carousel from '../util/carousel'
 
+import { setModalRenderer } from '../App'
+import CaseStudyComponent from './CaseStudy'
+
 interface OwnProps {
     displaySeparator: boolean
     project: config.Project
@@ -29,6 +32,7 @@ export default class Project extends React.Component<OwnProps, OwnState> {
                     <div className='content'>
                         <h2>{project.name}</h2>
                         <ul className='tags'>{tags}</ul>
+                        {project.caseStudy && <CaseStudyButton project={project} />}
                         <div dangerouslySetInnerHTML={description} />
                         <ProjectMeta meta={project.meta} />
                     </div>
@@ -37,6 +41,21 @@ export default class Project extends React.Component<OwnProps, OwnState> {
             </li>
         )
     }
+}
+
+function CaseStudyButton({ project }: { project: config.Project }) {
+    const onClick = () => setModalRenderer.next(() => (
+        <CaseStudyComponent project={project} />
+    ))
+    return (
+        <button
+            className='btn btn-primary square mt-1'
+            type='button'
+            onClick={onClick}
+        >
+            View Case Study
+        </button>
+    )
 }
 
 function ProjectCarousel({ slides }: { slides: config.CarouselSlide[] }) {
