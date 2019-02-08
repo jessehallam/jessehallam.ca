@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import MainComponent from './Main'
+import MainComponent from './main'
 import NavBar from './NavBar'
 
 import Modal from './util/modal'
