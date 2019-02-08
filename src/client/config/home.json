@@ -1,0 +1,14 @@
+{
+    "info": [
+        { "name": "Location", "value": "Toronto, ON" },
+        { "name": "Email", "href": "mailto:contact@jessehallam.ca", "value": "contact@jessehallam.ca" },
+        { "name": "Phone", "href": "tel:3433330018", "value": "343 333-0018" }
+    ],
+    "resume": "https://docs.google.com/document/d/1QF4zs0uLPV681m3xRVewt0QI_fCXxit0AExOXI0xQpI/edit?usp=sharing",
+    "social": [
+        { "icon": "fa-github", "title": "GitHub", "href": "https://github.com/jessehallam" },
+        { "icon": "fa-linkedin", "title": "LinkedIn", "href": "https://www.linkedin.com/in/jessehallam" },
+        { "icon": "fa-stack-overflow", "title": "Stack Overflow", "href": "https://stackoverflow.com/story/jessehallam" }
+    ],
+    "summary": "With over a decade of experience working in web and desktop technologies, Jesse specializes in the Microsoft stack, including a proficiency with Microsoft Visual Studio, .NET Framework, and a focus on responsive web applications using Microsoft ASP.NET and modern front-end frameworks, including Angular, React, and Vue.js."
+}

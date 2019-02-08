@@ -412,7 +412,7 @@
     font-weight: 400;
     float: left;
     margin-bottom: 10px;
-    min-width: 70px;
+    min-width: 85px;
     text-transform: uppercase;
   }
   .contact dl dd {
@@ -499,4 +499,42 @@
 
   .owl-theme .owl-controls .owl-page span {
     background: rgb(64, 84, 175) !important;
+  }
+  .jh .skill-body p {
+    font-size: 18px;
+  }
+
+  .square {
+    border-radius: 0 !important;
+  }
+
+  .mt-1 {
+    margin-top: 8px;
+  }
+
+  .case-study-body {
+    padding: 14px;
+  }
+
+  .case-study-title {
+    margin-bottom: 10px;
+  }
+
+  .case-study-body .breadcrumb {
+    margin-bottom: 12px;
+    overflow: auto;
+  }
+
+  .case-study-body .breadcrumb .active a {
+    font-weight: 600;
+  }
+
+  .case-study-content p {
+    font-size: 16px;
+  }
+
+  @media (min-width: 1100px) {
+    .modal-dialog {
+      width: 860px;
+    }
   }

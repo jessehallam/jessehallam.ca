@@ -1,15 +1,42 @@
 import * as React from 'react'
 
-export default class CarouselComponent extends React.Component {
+interface OwnProps {
+    slides: string[]
+}
+interface OwnState {}
+
+export default class Carousel extends React.Component<OwnProps, OwnState> {
+    private div: HTMLDivElement
+
+    constructor(props) {
+        super(props)
+    }
+
     componentDidMount() {
-        $('.owl-carousel').owlCarousel({
-            navigation: true,
-            slideSpeed: 1000,
-            singleItem: true
-        })
+        console.log('Mounting carousel on ', this.div)
+        const target = $(this.div)
+        if (target && target.length) {
+            target.owlCarousel({
+                navigation: true,
+                singleItem: true,
+                slideSpeed: 1000
+            })
+        }
     }
 
     render() {
-        return this.props.children
+        const items = this.props.slides.map((slide, i) => (
+            <div className='item' key={'slide-' + i}>
+                <img alt='' src={slide} />
+            </div>
+        ))
+        return (
+            <div
+                className='owl-carousel owl-theme'
+                ref={div => (this.div = div)}
+            >
+                {items}
+            </div>
+        )
     }
 }
